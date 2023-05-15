@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-feature-settings: "ss04";
+    color: #111;
+    font-family: -apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue, Helvetica, Ubuntu, Roboto, Noto, Segoe UI, Arial,
+      sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  img {
+    border-style: none;
+    vertical-align: middle;
+  }
+  
+  .container {
+    padding-inline: 12px;
+  }
+  
+  .header {
+    text-align: center;
+  }
+  
+  .header-title {
+    font-size: 28px;
+    line-height: 1.25;
+    margin-bottom: 16px;
+  }
+  
+  .plus {
+    background: linear-gradient(
+      to left,
+      rgba(0, 224, 255, 1) 0%,
+      rgba(250, 0, 255, 1) 33%,
+      rgba(0, 224, 255, 1) 66%,
+      rgba(250, 0, 255, 1) 100%
+    );
+    background-repeat: repeat-x;
+    background-size: 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  
+    animation: color 12s linear infinite;
+  }
+  
+  .images-grid {
+    display: grid;
+  }
+  .area {
+    -webkit-font-smoothing: antialiased;
+    background-color: #111;
+    border-radius: 16px;
+  }
+  
+  .grid-area-one {
+    align-items: center;
+    grid-area: a;
+    overflow: hidden;
+  }
+  
+  .grid-area-two {
+    grid-area: b;
+    overflow: hidden;
+  }
+  .grid-area-three {
+    grid-area: c;
+  }
+  
+  .grid-header-title {
+    color: #fff;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    margin-top: 0;
+    font-size: 21px;
+  }
+  
+  .grid-header-desc {
+    color: #d1d1d1;
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+  
+  .gao-images {
+    height: 100%;
+    width: 100%;
+  }
+  .gao-images img {
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .gat-images {
+    position: relative;
+  }
+  
+  .gath-images {
+    padding: 0 32px 32px;
+  }
+  
+  .gat-images img,
+  .gath-images img {
+    height: auto;
+    width: 100%;
+  }
+  
+  .gath-images img {
+    border-radius: 16px;
+    filter: brightness(0.95);
+  }
+  
+  .gath-images svg {
+    position: absolute;
+    fill: #fff;
+  }
+  
+  .grid-header-desc strong {
+    font-weight: bolder;
+    color: #fff;
+  }
+  .grid-header-desc a {
+    font-weight: 700;
+    color: #fff;
+    transition: opacity 0.1s ease-in-out;
+  }
+  .grid-header-desc a:hover {
+    color: #fff;
+    opacity: 0.8;
+  }
+  
+  .gath-images {
+    position: relative;
+  }
+  
+  .gao-header,
+  .gat-header,
+  .gath-header {
+    padding: 32px;
+  }
+  
+  @keyframes color {
+    0% {
+      background-position: 100% 0;
+    }
+  
+    to {
+      background-position: 12% 100%;
+    }
+  }
+  
+  .images-grid {
+    gap: 16px;
+    grid-template:
+      "a" minmax(auto, 420px)
+      "b" 400px
+      "c" auto;
+    padding-top: 32px;
+  }
+  
+  @media (min-width: 540px) {
+    .images-grid {
+      grid-template:
+        "a" minmax(auto, 560px)
+        "b" 540px
+        "c" auto;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .gath-images svg {
+      bottom: 48px;
+      height: 72px;
+      right: 48px;
+      width: 72px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      margin-inline: auto;
+      max-width: 1320px;
+      padding-inline: 20px;
+    }
+  
+    .header-title {
+      font-size: 40px;
+    }
+    .images-grid {
+      gap: 24px;
+      grid-template: "a a" 434px "b c" 531px/1fr 1fr;
+      padding-top: 56px;
+    }
+    .grid-area-one {
+      display: flex;
+    }
+  
+    .grid-header-title {
+      font-size: 28px;
+    }
+    .grid-header-desc {
+      font-size: 21px;
+      line-height: 1.5;
+      margin-top: 16px;
+    }
+    .gao-images img {
+      height: auto;
+    }
+  
+    .gath-images svg {
+      bottom: 56px;
+      height: 104px;
+      right: 56px;
+      width: 104px;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .gat-images {
+      left: -5%;
+      width: 110%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .images-grid {
+      grid-template: "a a" 434px "b c" 657px/1fr 1fr;
+    }
+    .gao-header {
+      padding: 80px;
+    }
+  
+    .gat-images {
+      left: -40px;
+      rotate: -5deg;
+      width: 119%;
+    }
+    .gath-images {
+      padding: 0 80px 80px;
+    }
+  
+    .gat-header {
+      padding: 80px 80px 96px;
+    }
+  
+    .gath-header {
+      padding: 80px 80px 48px;
+    }
+  }
+  
